@@ -1,32 +1,34 @@
 <div align="center">
 
-<img src="pictures/icon.png" width="120" height="120" alt="课堂点名计时器" />
+<img src="pictures/icon.png" width="140" height="140" alt="课堂点名计时器" style="border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);" />
 
-# 课堂点名计时器
+# 🎓 课堂点名计时器
 
 **ClassroomTimer · 专为课堂教学设计的轻量工具集**
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
-[![PyQt5](https://img.shields.io/badge/PyQt5-5.15%2B-41CD52?style=flat-square&logo=qt&logoColor=white)](https://riverbankcomputing.com/software/pyqt/)
-[![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=flat-square&logo=windows&logoColor=white)]()
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-6.0-ff6b6b?style=flat-square)]()
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![PyQt5](https://img.shields.io/badge/PyQt5-5.15%2B-41CD52?style=for-the-badge&logo=qt&logoColor=white)](https://riverbankcomputing.com/software/pyqt/)
+[![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)]()
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+[![Version](https://img.shields.io/badge/Version-6.0-ff6b6b?style=for-the-badge)]()
 
-[功能预览](#功能预览) · [快速开始](#快速开始) · [功能介绍](#功能介绍) · [开发指南](#开发指南) · [更新日志](#更新日志)
+[🚀 快速开始](#快速开始) · [✨ 功能预览](#功能预览) · [📖 功能介绍](#功能介绍) · [🕹️ 遥控抽签](#️-遥控抽签翻页笔方案)
 
 </div>
 
 ---
 
-## 简介
+## 📌 简介
 
 课堂点名计时器是一款专为教师打造的 Windows 桌面工具，集 **随机点名**、**课堂计时** 等功能于一体。
 
 程序以一个悬浮小球的形式常驻屏幕角落，不遮挡教学内容，需要时一键唤出。支持拖放名单、全局热键抽签、日间/夜间主题，是课堂教学的得力助手。
-以翻页笔为工具的遥控抽签满足教师在任意位置随时随地抽签，小窗口置顶显示，不影响PPT、其他工具正常使用。
+
+以翻页笔为工具的遥控抽签满足教师在任意位置随时随地抽签，小窗口置顶显示，不影响 PPT、其他工具正常使用。
+
 ---
 
-## 功能预览
+## ✨ 功能预览
 
 | 功能 | 说明 |
 |------|------|
@@ -37,31 +39,48 @@
 | ⌨️ **全局热键抽签** | 任意场景一键异步抽签，无需切换窗口 |
 | 🌙 **双主题** | 日间暖色 / 夜间冷色，一键切换 |
 | 📋 **名单管理** | 支持 txt / xlsx / xls / csv / docx / doc 导入 |
-| ✏️ **屏幕批注** | *（开发中）* 屏幕透明画布，多色画笔与橡皮擦 |
-| 🤖 **自动化调度** | *（开发中）* 定时任务，自动执行指定操作 |
+| ✏️ **屏幕批注** | *(开发中)* 屏幕透明画布，多色画笔与橡皮擦 |
+| 🤖 **自动化调度** | *(开发中)* 定时任务，自动执行指定操作 |
 
 ---
 
-## 快速开始
+## 🚀 快速开始
 
-### 方式一：官网下载（推荐）
+### 方式一：官网下载（推荐）⭐
 
-前往 官网 **[chemistrytimer.top](https://chemistrytimer.top)** 下载最新版安装包，双击运行安装向导即可。
-具体使用教程可参阅网站“帮助与反馈”部分。
+前往官网 **[chemistrytimer.top](https://chemistrytimer.top)** 下载最新版安装包，双击运行安装向导即可。
+
+具体使用教程可参阅网站"帮助与反馈"部分。
 
 **系统要求：** Windows 10 / 11，无需安装 Python
 
-### 方式二：GitHub rlease
+### 方式二：GitHub Release
 
-在rlease处直接下载程序安装包。
+在 Release 处直接下载程序安装包。
+
+### 方式三：源码运行
+
+```bash
+# 克隆项目
+git clone https://github.com/YOUR_USERNAME/classtimer.git
+cd classtimer
+
+# 安装依赖
+pip install -r requirements.txt
+
+# 启动程序
+python main.py
+```
 
 ---
 
-## 功能介绍
+## 📖 功能介绍
 
 ### 🎱 悬浮小球
 
 程序启动后，屏幕上会出现一个可自由拖动的浮球。
+
+<img src="pictures/P5/low-distraction.png" width="300" alt="悬浮小球演示" />
 
 - **单击** 展开主面板
 - **拖动** 调整位置
@@ -72,6 +91,8 @@
 ### 🎲 随机点名
 
 采用**加权随机算法**，每次被点到的同学权重降低，长期未被点到的同学权重升高，确保点名更加公平均衡。
+
+<img src="pictures/p5/random-pick.png" width="300" alt="随机点名界面" />
 
 - 支持批量导入名单（拖拽文件到窗口即可）
 - 支持自定义每次抽取人数
@@ -93,10 +114,12 @@
 
 **无论当前打开什么程序、处于哪个窗口**，只需按下设定的热键，即可立刻触发随机抽签，结果以悬浮窗口的形式显示在屏幕上，不打断当前操作。
 
-- 默认热键：Tab（可在设置中自定义）
-- 支持 Tab、F1~F12等多种组合
+<img src="pictures/v6/设置.png" width="300" alt="全局热键设置" />
+
+- 默认热键：`Tab`（可在设置中自定义）
+- 支持 `Tab`、`F1`~`F12` 等多种组合
 - 抽签结果 2 秒后自动淡出，不遮挡教学内容
-- 使用 Windows RegisterHotKey API 实现，系统级响应，稳定可靠
+- 使用 Windows `RegisterHotKey` API 实现，系统级响应，稳定可靠
 
 #### 🕹️ 遥控抽签：翻页笔方案
 
@@ -107,10 +130,18 @@
 1. 手持翻页笔在教室任意位置走动
 2. 按下翻页笔上的自定义键
 3. 屏幕上立即弹出被抽到的同学姓名
-设置方式：
-在设置中找到“异步抽取快捷键”，点击录键后按下翻页笔上的闲置按键即可。
+
+设置方式：在设置中找到"异步抽取快捷键"，点击录键后按下翻页笔上的闲置按键即可。
 
 **无需触碰电脑，站在讲台任意位置均可操作。** 非常适合课堂互动提问场景。
+
+### ⏱ 课堂计时
+
+<img src="pictures/v6/countdown.png" width="300" alt="课堂计时" />
+
+- 倒计时 / 正计时两种模式
+- 音效提醒（计时结束）
+- 快速模式：关闭所有动画，响应更迅速
 
 ### ✏️ 屏幕批注 *(开发中)*
 
@@ -134,7 +165,7 @@
 
 ---
 
-## 项目结构
+## 📁 项目结构
 
 ```
 classtimer/
@@ -172,7 +203,7 @@ classtimer/
 
 ---
 
-## 开发指南
+## 📖 开发指南
 
 ### 依赖环境
 
@@ -205,7 +236,18 @@ python-docx >= 1.1.0
 > **注意**：在设置页新增控件时，留意小挡位（`WIN_W < 500`）下右侧栏会移至下方，控件固定宽度建议 ≤ 120px。
 
 ---
-低版本介绍
+
+## 📝 更新日志
+
+### v6.0 (2026-03)
+- ✨ 全新安装器，支持桌面快捷方式、开机自启、一键卸载
+- ✨ 新增 Word 文档（.docx/.doc）名单导入
+- ✨ 界面缩放四档可选，低缩放模式自适应布局
+- ✨ 设置页批注/自动化默认关闭
+- 🐛 修复重启时浮球图标消失问题
+- 🐛 修复卸载后残留文件夹问题
+- 🐛 修复缩放按钮切换主题后文字消失问题
+
 ### v5.x
 - 加权随机抽签算法
 - 全局热键异步抽签
@@ -215,7 +257,7 @@ python-docx >= 1.1.0
 
 ---
 
-## 贡献
+## 🤝 贡献
 
 欢迎提交 [Issue](../../issues) 反馈问题，或 [Pull Request](../../pulls) 贡献代码。
 
@@ -227,7 +269,7 @@ python-docx >= 1.1.0
 
 ---
 
-## 许可证
+## 📄 许可证
 
 本项目采用 [MIT License](LICENSE) 开源协议。
 
@@ -237,6 +279,6 @@ python-docx >= 1.1.0
 
 **如果这个项目对你有帮助，欢迎点一个 ⭐ Star！**
 
-制作 & 维护：**ShuangSue** · 测试班级：高二十班 · © 2024–2026
+制作 & 维护：**ShuangSue** · 测试班级：高二十一班 · © 2024–2026
 
 </div>
